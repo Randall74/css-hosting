@@ -1,0 +1,1356 @@
+/* CSS for the Top Nav and Footer. */
+
+
+
+/* _________________ Top Navigation _________________ */
+
+/* Yamm!3 - Yet another megamenu for Bootstrap 3 */
+
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+	position: static;  
+}
+
+.yamm .container {
+	position: relative;
+}
+
+.yamm .dropdown-menu {
+	left: auto;
+}
+
+/* last dropdown at smaller sizesm - align right to stay on page. */
+
+@media (max-width: 992px){
+}
+
+@media (max-width: 767px){
+	.yamm ul#primary-nav li.dropdown ul.dropdown-menu.last {float: none !important;}
+}
+
+.yamm .yamm-content {
+	padding: 0px 0px;
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu {
+	left: 0;
+	right: 0;
+}
+
+@media (min-width: 768px) {
+	.yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown {
+		padding: 0;
+	}	
+}
+
+/* dropdown text color */
+#primary-nav li.dropdown ul.dropdown-menu li a {
+	color: #908f8f;
+}
+
+/* trying to be sure the top nav links have underline on :hover */
+#primary-nav li.dropdown ul.dropdown-menu li a:hover {
+	text-decoration: underline;
+}
+
+/* Spread out links - wspecially for mobile. */
+nav.navbar.yamm ul#primary-nav li.yamm-content ul li {
+	margin: 6px 0 6px 0;
+}
+
+@media(max-width: 767px){
+	nav.navbar.yamm ul#primary-nav li.yamm-content ul li {
+		margin: 12px 0 12px 8px;
+	}
+	.yamm-content li > strong {
+		margin-left: -10px;
+	}
+}
+
+/* Custom container */
+.navbar .container-full {
+	width: 100% !important;
+}
+
+.navbar {
+	margin-bottom: -1px;	/*was 8px - check between desktop & mobile*/
+	border: none;
+}
+
+.nav > li > a > p {
+	-webkit-transition: all 150ms ease;
+	   -moz-transition: all 150ms ease;
+	    -ms-transition: all 150ms ease;
+	     -o-transition: all 150ms ease;
+	        transition: all 150ms ease;
+}
+
+/* Center nav */
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center.navbar .nav,
+.center.navbar .nav > li {
+	float:none;
+	display:inline-block;
+	/* ie7 fix */
+	*display:inline;
+	/* hasLayout ie7 trigger */
+	*zoom:1;
+	vertical-align: top;
+}
+
+.center.navbar-inner {
+	text-align:center;
+}
+
+.center .dropdown-menu {
+	text-align: left;
+}
+
+.navbar-inner {
+	margin: 0 auto;
+}
+
+/* Menu Styes */
+.list-unstyled,
+.list-unstyled ul { 
+	padding-left: 32px;
+	color: grey;
+	/* was 120 - broke on 2-columns*/
+	min-width: 220px; 
+}
+
+/*Overwrite Bootstrap*/
+.navbar-default {
+	background: transparent !important;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+/* Get rid of mobile hamburders background. */
+@media (max-width: 767px) {
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+		background-color: transparent;
+	}
+}
+
+/* position open dropdowns right under main nav. */
+
+#primary-nav.navbar-nav li.hidden-xs {
+	border: none;
+	padding: 9px 0 0 0;
+	max-width: 120px;
+}
+
+.nav.navbar-nav {
+	position: relative;
+	display: block;
+	float: none;
+	padding: 0;
+	margin: 5px auto 0 auto;
+}
+
+/* logo is now a child, so this may be thrown off - see if we need to move to (6). */
+ .navbar-nav li:nth-child(5) {
+	margin-right: 0;
+}
+
+.fa-plus {
+	display: none;
+}
+
+.nav.navbar-nav li a {
+	color: #fff;
+}
+
+.nav.navbar-nav li a:hover {
+	color: #777;
+}
+
+/* Seconday nav */
+
+/* Secondary Nav text color*/
+ul#subnav-1 {
+	/*max-width: 870px;*/		/* Old,pre-mag glass search*/
+	max-width: 900px;			/* New */
+	margin:	6px auto 0 auto;	/* May take out later. */
+	padding: 0;
+	float: none; 				/* This may float right later.*/
+}
+
+/*remove padding and margin on last one. */
+ul#subnav-1 li.search.mobile, ul#subnav-1 li.search.desktop {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+ul#subnav-1 li.search.desktop a {
+	margin-top: -2px;
+}
+
+.navbar-nav > li {
+	padding-right: 25px;
+}
+
+/* Font overrides */
+.navbar-header button.navbar-toggle {
+	border: none;
+	color: #aaa;
+}
+
+/* pad subnav icons and text */
+.navbar div#navbar div.nav ul#subnav-1 li a span.fa {
+	margin-right: 4px;
+}
+
+.navbar-header button.navbar-toggle .fa-bars {
+	font-size: 22px;
+	line-height: 1.1;
+}
+
+.navbar-header button.navbar-toggle .fa-times {
+	font-size: 22px;
+	color: #aaa;
+	line-height: 0.7;  
+}
+
+/*drop-down menu*/
+ .dropdown-menu {
+	box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.35);
+	border-top: solid 1px transparent;
+	border-radius: 0;
+}
+
+/* Height breaks mobile menu drop-down. Put in media query. */
+@media (min-width: 768px) {
+	.navbar-bg-col-1 {
+		border-color: #000000;
+		height: 38px;
+		background-color: transparent;
+	}
+}
+
+/* Set initial logo size & position. */
+img#desktop-logo {
+	max-width: 85%;
+}
+
+ div#navbar div.logo {
+	width: 214px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 35px;
+}
+
+/* Rename these! Nav images. Get rid of "image" names below. Put in media query? */
+/* logo - desktop*/
+#image, #desktop-logo {
+	margin-top: -27px;
+	margin: 0 auto 10px auto;
+}
+
+/*Logo - mobile*/
+#image2 {
+	height: 55px;
+	margin: 11px auto 0 auto;
+}
+
+/*Search - mobile*/
+#image3 {
+	height: 24px;
+	width: 24px;
+	float: right;
+	margin-top: -42px;
+	margin-right: 13px;
+}
+
+/* Nav Type - Main */
+#primary-nav.navbar-nav > li > a {
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+	color: #908f8f;
+	font-size: 18px;
+	line-height: 1;
+	padding: 18px 30px;
+	/*Overwrite Bootstrap*/
+	text-shadow: none;
+}
+
+ #primary-nav.navbar-nav > li > a:hover {
+	color: #777;
+}
+
+ #primary-nav.navbar-nav > li:last-child > a {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.navbar-brand, .navbar-nav > li > a {
+	/*Overwrite Bootstrap*/
+	text-shadow: none;
+}
+
+.navbar-nav > li {
+}
+
+.navbar-nav > li:last-child {
+	padding-right: 0;
+}
+
+/* Primary nav styles. */
+
+ div#navbar .navbar-bg-col {
+	max-width: 1240px;
+	height: 128px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+ div#navbar div.container.navbar-bg-col ul#primary-nav {
+	max-width: 950px;
+	float: left;
+	margin-top: 36px;
+}
+
+ ul#primary-nav li.dropdown {
+	border-left: solid 1px #e0e0e0;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	#image2 {
+		margin: 0 auto;
+		margin-top: 11px;
+	}
+	.list-unstyled li > a {
+		color: #777;
+	}
+}
+
+@media (max-width: 767px){
+	.navbar-collapse .container{
+		padding: 0 20px;
+	} 
+	.navbar-bg-col .dropdown-toggle, 
+	.navbar-bg-col-1,
+	.navbar-bg-col-1 .nav.navbar-nav li a {
+		padding-left: 0;
+		padding-right:0; 
+	}
+	#primary-nav.navbar-nav li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar-nav li:nth-child(5){	/* will I need this with new nav? delete? */	/**/
+		/*margin:0;*/
+	}
+	#primary-nav a.dropdown-toggle{ 
+		position: relative;
+		padding: 15px 0 15px 15px;
+		border-bottom: solid 1px #eee;
+	}
+	.dropdown-toggle:before { 
+		position: absolute;
+		left: 0;
+		top: 16px;
+		content:"+";
+		font-size: 16px;
+		font-weight: bold;
+	}
+	#primary-nav  .open a.dropdown-toggle{
+		background: none;
+		box-shadow:none;
+		-webkit-box-shadow:none;
+	}
+	.open .dropdown-toggle:before { 
+		content: "_";
+		top: 11px;
+	}
+	#primary-nav.navbar-nav li.dropdown {
+		border-right-style: none;
+	}
+	.navbar-toggle {
+		position: absolute;
+		left: 8px;
+		margin-top: 14px;
+	}
+	.navbar-nav > li > a {
+		color: #777;
+		font-size: 13px;
+	}
+
+	.navbar-header {
+	}
+
+	/* Logo link took over whole bar, made search mag glass hard to tap. */
+	.navbar.yamm.navbar-default .navbar-header a.logoLink {
+		width: 120px;
+		margin: 0 auto;
+		/*so 'a' tag doesn't overlap the search link on the smallest phones.*/
+		display: block;
+	}
+}
+
+@media (min-width: 767px){
+	#primary-nav.navbar-nav > li {
+		padding: 0px;
+	}
+	#primary-nav.navbar-nav > li > a {
+		padding: 17px 30px;
+	}
+}
+
+@media (max-width: 479px) {
+	#image2 {
+		margin: 0 auto;
+		margin-top: 11px;
+	}
+	.fa-plus {
+		display: inline-block;
+	}
+	.nav.navbar-nav {
+		width: 100%;
+	}
+	#primary-nav.nav.navbar-nav li a {
+		font-size: 16px;
+	}
+}
+
+/* bootstrap overwrites */
+
+/* Indent nav indents so stuff without headlines is indented. */
+.dropdown-menu > li > a {
+	padding-left: 38px;
+}
+
+.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu > li > a {
+	padding-left: 38px;
+}
+
+/* Shrink Primary Nav width down as screen decreases - so it won't break lines. */
+
+@media (max-width: 1230px){
+	 div#navbar .navbar-bg-col {
+		height: 100px;
+	}
+	 div#navbar div.container.navbar-bg-col ul#primary-nav {
+		margin-top: 26px;
+		max-width: 800px;
+	}
+	img#desktop-logo {
+		max-width: 85%;
+	}
+	 div#navbar div.logo {
+		width: 214px;
+		float: left;
+		margin-right: 20px;
+		margin-top: 23px;
+	}
+	 #primary-nav.navbar-nav > li > a {
+		font-size: 16px;
+		padding: 16px 18px;
+	}
+}
+
+@media (max-width: 1060px){
+	 div#navbar .navbar-bg-col {
+		height: 80px;
+	}
+	 div#navbar div.container.navbar-bg-col ul#primary-nav {
+		margin-top: 18px;
+		max-width: 700px;
+	}
+	img#desktop-logo {
+		max-width: 75%;
+	}
+	 div#navbar div.logo {
+		margin-right: 10px;
+		margin-top: 14px;
+	}
+	 #primary-nav.navbar-nav > li > a {
+		font-size: 15px;
+		padding: 14px 14px;
+	}
+}
+
+@media (max-width: 993px){
+	/* Get rid of last two li children (which are empty and hold columns intact) for mobile) */
+	ul#primary-nav ul.dropdown-menu ul.list-unstyled:first-child li:nth-last-child(-n+2) {
+		/*display: none;*/
+	}
+}
+
+@media (max-width: 950px){
+	 div#navbar .navbar-bg-col {
+		height: 70px;
+	}
+	 div#navbar div.container.navbar-bg-col ul#primary-nav {
+		margin-top: 15px;
+		max-width: 640px;
+	}
+	img#desktop-logo {
+		max-width: 70%;
+	}
+	 div#navbar div.logo {
+		margin-right: 0;
+		margin-top: 11px;
+	}
+	 #primary-nav.navbar-nav > li > a {
+	    font-size: 14px;
+	    padding: 12px 12px;
+	}
+}
+
+@media (max-width: 876px){
+	 div#navbar .navbar-bg-col {
+		height: 65px;
+	}
+	 div#navbar div.container.navbar-bg-col ul#primary-nav {
+		margin-top: 16px;
+		max-width: 580px;
+	}
+	img#desktop-logo {
+		max-width: 75%;
+	}
+	 div#navbar div.logo {
+		margin-right: 0;
+		margin-top: 8px;
+		width: 200px;
+	}
+	 #primary-nav.navbar-nav > li > a {
+		font-size: 13px;
+		padding: 10px 10px;
+	}
+}
+
+@media (max-width: 804px){
+	 div#navbar .navbar-bg-col {
+		height: 65px;
+	}
+	 div#navbar div.container.navbar-bg-col ul#primary-nav {
+		margin-top: 18px;
+		max-width: 560px;
+	}
+	img#desktop-logo {
+		max-width: 92%;
+	}
+	 div#navbar div.logo {
+		margin-right: 8px;
+		margin-top: 11px;
+		width: 160px;
+	}
+	 #primary-nav.navbar-nav > li > a {
+		font-size: 13px;
+		padding: 10px 8px;
+	}
+}
+
+ .navbar-bg-col {
+    background-color: #fff;
+    border-color: #e7e7e7;
+}
+
+div#navbar div.container.navbar-bg-col-1 {
+	background-color: #00a94f;
+}
+
+@media (max-width: 767px){
+	 div#navbar div.container.navbar-bg-col ul#primary-nav {
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	 ul#primary-nav li.dropdown {
+		border-left: solid 1px transparent;
+	}
+	 div#navbar div.container.navbar-bg-col-1 {
+		background-color: transparent;
+	}
+	 div#navbar .navbar-bg-col {
+		height: auto;
+	}
+	 #primary-nav.navbar-nav > li > a {
+		font-size: 16px;
+		padding: 18px;
+	}
+}
+
+/* Secondary Nav Styles */
+
+#subnav-1 > li > a {
+	padding: 3px;
+	margin-left: 10px;
+	font-size: 100%;	/*keep?*/
+}
+
+/* Don't allow secondary lines to break. */
+
+@media (max-width: 922px){
+	ul#subnav-1 {
+		width: 97%;
+	}
+	#subnav-1.navbar-nav > li {
+		padding-right: 8px;
+		padding-left: 0;
+	}
+	#subnav-1.navbar-nav > li a {
+		font-size: 90%;
+	}
+	ul#subnav-1 li.search.desktop a {
+		margin-top: 0px;
+	}
+}
+
+@media (max-width: 767px) {
+	#subnav-1.nav.navbar-nav {
+		padding: 20px 0;
+	}
+	#subnav-1.navbar-nav > li a {
+		font-size: 16px;
+		padding: 3px;
+		line-height: 20px;
+		color: #908f8f;
+	}
+	#subnav-1.navbar-nav > li a:hover {
+		color: #777;
+	}
+}
+
+@media(max-width:  765px){
+	.navbar .navbar-collapse.collapse.in, .navbar .navbar-collapse.collapse {
+		padding: 0px 15px;
+	}
+}
+
+/* _________________ Breadcrumbs _________________ */
+
+div.bread-container {
+	/*border-top: solid 1px #d0d0d0;*/
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	/* Fallback if breadcrumbs run too long. */
+	overflow: hidden;
+}
+
+/*change some positioning for mobile menus.*/
+@media (max-width: 767px){
+	div.bread-container {
+		/*border-top: transparent;*/
+		margin-bottom: 0;
+		display: none;
+	}
+	/* "Sectional" and "inside" pages have breadcrumbs. */
+	.navbar {
+		margin-bottom: 0;
+	}
+	/*home page has no breadcrumbs*/
+	.home .navbar {
+		margin-bottom: 0;
+	}
+}
+
+ul.breadcrumbs {
+	margin: 0 auto;
+	height: 22px;
+	list-style-type: none;
+	padding: 0;
+	visibility: hidden;
+}
+
+ul.breadcrumbs li {
+	float: left;
+	background: url("../images/bullet-carrot.png") no-repeat right center;
+	padding: 0 12px 2px 6px;
+}
+
+@media(max-width: 767px){
+	ul.breadcrumbs li {
+		padding: 0 12px 0 6px;	/*was 12px 12px 12px 6px;*/
+	}
+}
+
+ul.breadcrumbs li:last-child {
+	background: none;
+}
+
+ul.breadcrumbs li a {
+	color: #515151;
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+ul.breadcrumbs li a.selected {
+	/*color: #0081c6;*/
+}
+
+ul.breadcrumbs li a.selected:hover, ul.breadcrumbs li a.selected:active {
+	text-decoration: none;
+	cursor: default;
+}
+
+/*ellipses*/
+
+
+
+
+
+
+
+/* _________________ Page Sidenav _________________ */
+
+
+.side-nav-container {
+	padding: 0;
+	display: block;
+}
+
+@media (min-width: 1180px) {
+	.side-nav-container {
+		/*width: 194px;*/
+	}
+}
+
+@media (min-width: 1180px) {
+	.side-related-container {
+		/*width: 194px;*/
+		width: 417px;
+	}
+}
+
+@media (max-width: 991px){
+	.side-nav-container {
+		display: none;
+	}
+}
+
+.side-nav-container nav.nav-sidebar {
+}
+
+.side-nav-container nav.nav-sidebar ul.nav.sidenav {
+}
+
+.side-nav-container nav.nav-sidebar ul.nav.sidenav li {
+}
+
+.side-nav-container nav.nav-sidebar ul.nav.sidenav li ul li a {
+	color: #000;
+	display: none;
+}
+
+/*Side nav fixed position*/
+
+/*.affix, .affix-top, .affix-bottom {
+	width: 194px;
+	width: 360px;
+}*/
+
+nav.nav-sidebar.affix-top {
+    position: fixed;
+}
+
+nav.nav-sidebar a.back-to-top, .nav-sidebar a {
+	display: block;
+}
+
+.affix {
+	top: 5px;
+}
+
+@media (min-width: 1200px) {
+	.affix {
+	}
+}
+
+.affix-bottom {
+}
+
+#page-nav .page-navigation,
+#page-nav-mobile .page-navigation {
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+@media (min-width: 992px) {
+	#page-nav .page-navigation {
+		padding: 10px 0 20px;
+	}
+}
+
+/* Keep the nav stucture visibile */
+.page-navigation .nav {
+	display: block;
+	position: relative;
+}
+
+/* Nav styling */
+#page-nav .active {
+	font-weight: bold;
+}
+
+#page-nav .active .nav {
+	display: block;
+}
+
+#page-nav .fa-chevron-circle-right.vcenter {
+	
+}
+
+/* Navigation Location Info */
+.nav-location {
+	padding-left: 10px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.nav-location h4 {
+	font-size: 1.1em;
+	margin: 0;
+}
+
+.nav-location p {
+	font-size: 1.4em;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+
+/* Subheads */
+.sub-head {
+	font-size: 1.3em;
+	color: #646464;
+	text-align: center;
+	display: block;
+	margin: 0 0 15px 0;
+}
+@media (min-width: 992px) {
+	.sub-head {
+		font-size: 1.1em;
+		margin: 0 0 5px 0;
+	}
+}
+
+.relatedContent .sub-head {
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0 0 18px 0;
+	color: #139f58;
+}
+
+/* Inside info pages. */
+h4.intro {
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+	margin: 0 0 20px 28px;
+	color: #646464;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/* subheads */
+#page-nav li p.sub-head:active, 
+#page-nav li p.sub-head:hover {
+	color: #646464;
+}
+
+/* Page Nav colors */
+
+/*base "Page Nav"*/
+#page-nav li ul.nav li {
+	/*background-color: #d1cdc6;*/
+	/*margin: 6px 0;
+	padding: 0 0;*/
+}
+
+/* For parts OTHER than the page sections. Supress background color. */
+#page-nav li ul.nav li.related-topics:hover,
+#page-nav li ul.nav li.related-topics,
+#page-nav li ul.nav li.other-links:hover,
+#page-nav li ul.nav li.other-links,
+
+
+/* Page Nav positioning for Font Awesome glyphs. */
+#page-nav li ul.nav li a i.fa {
+    display: inline-block;
+}
+
+/* Realted Topics nav */
+/*colors*/
+/*#page-nav.nav .related-topics ul li:nth-child(1) {
+	background-color: #fcb31c;
+}
+
+#page-nav.nav .related-topics ul li:nth-child(2) {
+	background-color: #b55aa2;
+}
+
+#page-nav.nav .related-topics ul li:nth-child(3) {
+	background-color: #73c9ee;
+}*/
+
+.related-nav > li > a:hover > p,
+.related-nav > li > a > p:focus,
+.related-nav > li > a > p:active,
+.related-nav > li > a > p:hover,
+.related-nav > li > a > i {
+	background-color: #0080C3;
+}
+
+/* Featured Leadership */
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio {
+	float: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio div.bioWrapper {
+}
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio div.bioWrapper div.photo {
+	float: none;
+	margin: 0 auto;
+	width: 150px;
+}
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio div.bioWrapper div.info {
+	border-bottom: 1px solid #b1b1b1;
+	float: none;
+	margin-bottom: 4px;
+	margin-top: 10px;
+	padding: 0 0 10px;
+	width: 100%;
+}
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio div.bioWrapper div.info a.name {
+	font-size: 16px;
+	line-height: 18px;
+	margin: 0;	
+	text-align: center;
+}
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio div.bioWrapper div.info p.secondary {
+    font-size: 15px;
+    line-height: 15px;
+    margin: 3px 0 6px 0;
+    text-align: center;
+}
+
+#page-nav li.related-topics li.leadership div.panel-body div.bio div.bioWrapper div.info p.leadershipDescription {
+    text-align: center;
+    margin: 0;
+}
+
+
+/* General info number */
+#page-nav p.contact {
+	text-align: center;
+}
+
+#page-nav p.contact strong {
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+/* Other Map stuff - probably a PLACEHOLDER. Leave for now.*/
+
+/* format featured location */
+#page-nav li .location-map ul.location-info {
+	padding: 0;
+}					
+
+/* links */
+/*#page-nav .nav a {
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	font-size: 0.95em;
+}*/
+
+#page-nav .nav a.phone {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-decoration: none;
+}
+
+
+/*Active/selected */
+#page-nav .nav .active a,
+#page-nav .nav .active:hover a,
+#page-nav .nav .active:focus a {
+	color: #eee;
+}
+
+/* Bootstrap overwrite */
+#page-nav li a:focus, 
+#page-nav li a:hover {
+	background-color: transparent;
+	border: solid 0px transparent;
+	color: #eee;
+}
+
+/* Google Map thumbnail */
+#page-nav .location-map {
+	margin: 0 auto;
+}
+
+#page-nav .location-map img {
+}
+
+/*initial positioning top-aligned */
+#page-nav {
+	background-color: #F0EFEC;
+	padding: 0;
+	margin-top: 0px;
+}
+
+
+/* links */
+
+#page-nav .nav a.phone {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-decoration: none;
+}
+
+
+/* _________________ Media Queries _________________ */
+/* Fix these and put them where they need to go. */
+
+/*move this up under nav?*/
+@media (max-width: 767px) {
+	.navbar-bg-col { 
+		background-color: transparent; border: 0px;
+	}
+	.navbar-bg-col-1 { 
+		background-color: transparent; border: 0px;
+	}
+	.nav>li>a {color: #000000;}
+	/*move this*/
+	/*Mobile Nav Title*/
+	#pageNavTitleMobile {
+		display: block;
+		color: #009a3d;
+		margin: 0;
+	}
+	/*Hide on mobile Info pages. */
+	.info #pageNavTitleMobile {
+		display: none;
+	}
+	.panel-title {
+		color: #fff;
+		font-size: 22px;
+		line-height: 24px;
+		margin: 0 0 0 0px;
+	}
+}
+
+/* Navigation Connection Styles */
+.nav-connect {
+	text-align: center;
+	font-size: 12px;
+}
+	@media (max-width: 991px) {
+		.nav-connect {
+			margin: 10px 0;
+		}
+	}
+
+.nav-connect p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+	@media (max-width: 991px) {
+		.nav-connect p {
+			font-size: 20px;
+		}
+	}
+	@media (min-width: 992px) {
+		.nav-connect p {
+			font-size: 12px;
+		}
+	}
+
+.nav-connect p:first-child {
+	color: #f05a61;
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+
+/* _________________ Featured location in-page in mobile _________________ */
+
+/*base "Page Nav"*/
+
+li.leadership, 
+li.leadership:hover {
+	background-color: transparent !important;
+}
+
+/* Pull "Other Links" closer to location list. Yes, it's a hack. Do we keep it?*/
+.page-navigation ul.nav li.other-links {
+	/*top: -15px;*/
+}
+
+
+/* _________________ Footer _________________ */
+
+footer {
+	background-color: #f0efec;
+	border-top: solid 1px #d0d4d8;
+	margin: 40px 0 0 0;
+	padding: 36px 0 4% 0;
+}
+
+footer .container {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+footer .container li.copyright {
+	font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+footer ul {
+	list-style-position: outside;
+	list-style: none;
+}
+
+footer ul li {
+}
+
+footer ul.row-social {
+	max-width: 528px;
+	margin: 0 auto 36px auto;
+	padding: 0;
+	min-height: 50px;
+}
+
+footer ul.row-social li {
+	width: 50px;
+	float: left;
+	margin: 0 7px 7px 0;
+	display: inline;
+}
+
+@media (max-width: 524px) {
+	footer ul.row-social li {
+		width: 50px;
+		float: left;
+		margin: 0 14px 14px 0;
+		display: inline;
+	}
+	footer ul.row-social li:last-child {
+		margin: 0;
+	}
+}
+
+footer ul.row-social li:last-child {
+	margin: 0;
+}
+
+footer ul.row-social li.divider {
+	width: 1px;
+	height: 50px;
+	border-right: solid 1px #636363;
+	padding: 0;
+	/*account for magin before divider*/
+	margin: 0 13px 0 6px;
+}
+
+@media (max-width: 604px) {
+	footer ul.row-social li.divider {
+		display: none;
+	}
+}
+
+footer ul.row-copyright {
+	max-width: 690px;
+	height: 24px;
+	margin: 36px auto 0 auto;
+	padding: 0;
+}
+
+@media (max-width: 524px) {
+	footer ul.row-copyright {
+		margin: 36px auto 0 auto;
+	}
+}
+
+footer ul.row-copyright li {
+	float: left;
+	margin: 0 0 0 0;
+}
+
+footer ul.row-copyright li a {
+	color: #646464;
+}
+
+footer ul.row-copyright li a:active, footer ul.row-copyright li a:hover {
+	color: #646464;
+}
+
+footer ul.row-copyright li:nth-child(1) {
+	min-width: 90px;
+}
+
+footer ul.row-copyright li:nth-child(3) {
+	min-width: 104px;
+	margin: 0 14px 0 0;
+}
+
+footer ul.row-copyright li.divider {
+	width: 1px;
+	height: 20px;
+	border-right: solid 1px #636363;
+	padding: 0;
+	margin: 0 7px;
+}
+
+footer ul.row-middle {
+	margin: 0 auto;
+	padding: 0;
+}
+
+footer ul.row-middle li ul {
+	/*float: left;*/
+	/*width: 33%;*/
+	margin: 0;
+	padding: 0;
+}
+
+footer ul.row-middle li ul.column-one, footer ul.row-middle li ul.column-two, footer ul.row-middle li ul.column-three, footer ul.row-middle li ul.column-four {
+	margin: 0 auto;
+}
+
+/*keep ULs in 3-columns until mobile*/
+/*   TRASH THIS QUERY?   */
+@media (min-width: 767px){
+	footer ul.row-middle li ul.column-one, footer ul.row-middle li ul.column-two, footer ul.row-middle li ul.column-three, footer ul.row-middle li ul.column-four {
+	}
+}
+
+footer ul li ul li a {
+	color: #646464;
+	font-size: 15px
+}
+
+footer ul li ul li a:active, footer ul li ul li a:hover {
+	color: #646464;
+}
+
+/* Probably TEMP - trash later?... */
+footer ul.row-middle li ul.column-one {
+}
+
+footer ul.row-middle li ul.column-two {
+}
+
+footer ul.row-middle li ul.column-three {
+}
+
+footer ul.row-middle li ul.column-four {
+}
+
+footer ul.row-middle li ul li {
+	padding: 2px 0;
+}
+
+/* "Best Of" images */
+
+footer ul.column-four li a img.img-responsive {
+	display: block;
+	max-height: auto;
+	max-width: 70%;
+}
+
+footer ul.column-four li:first-child a img.img-responsive {
+	max-height: auto;
+	max-width: 83%;
+}
+
+footer ul.column-four li {
+	max-width: 40%;
+	float: left;
+	margin-top: 4px;
+	margin-right: 10px;
+}
+
+@media (max-width: 991px){
+	footer ul.column-four li a img.img-responsive {
+		height: auto;
+		max-width: 70%;
+	}
+	footer ul.column-four li:first-child a img.img-responsive {
+		max-height: auto;
+		max-width: 83%;
+	}
+	footer ul.column-four li {
+		max-width: 10%;
+	}
+}
+
+@media (max-width: 767px){
+	footer ul.column-four li a img.img-responsive {
+		height: auto;
+		max-width: 100%;
+	}
+	footer ul.column-four li:first-child a img.img-responsive {
+		max-height: auto;
+		max-width: 100%;
+	}
+	footer ul.column-four li {
+		max-width: 12%;
+		float: none;
+		margin-top: 10px;
+	}
+	/* Cancel last primary nav member right float for mobile */
+	#navbar li.dropdown.pull-right {
+		float: none !important;
+	}
+}
+
+@media (max-width: 480px){
+	footer ul.column-four li a img.img-responsive {
+		height: auto;
+		max-width: 100%;
+	}
+	footer ul.column-four li:first-child a img.img-responsive {
+		max-height: auto;
+		max-width: 100%;
+	}
+	footer ul.column-four li {
+		max-width: 20%;
+		float: none;
+	}
+	/*type size and padding gets bigger for mobile*/
+	footer ul.row-copyright.Clearfix li:last-child {
+		margin-top: 10px;
+	}
+	footer ul.row-copyright.Clearfix li a {
+		font-size: 16px;
+	}
+	footer ul.row-middle li ul li {
+		padding: 6px 0;
+	}
+	footer ul li ul li a {
+		font-size: 16px
+	}
+}
+
+/* __________________________________ Newly Added - Move __________________________________ */
+/* ________________________________________________________________________________________ */
+
+
+#primary-nav li.dropdown ul.dropdown-menu li .mobileNav-landing {
+	margin: 20px 0 20px -10px;
+	/*Client wants initial caps now.*/
+	/*text-transform: uppercase;*/
+	font-size: 15px;
+	display: block;
+	height: 0;
+	line-height: 0;
+}
+
