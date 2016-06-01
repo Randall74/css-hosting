@@ -179,7 +179,7 @@ ul#subnav-1 {
 	/*max-width: 870px;*/		/* Old,pre-mag glass search*/
 	max-width: 900px;			/* New */
 	margin:	6px auto 0 auto;	/* May take out later. */
-	padding: 0;
+	padding: 0 0 0 150px;
 	float: none; 				/* This may float right later.*/
 }
 
