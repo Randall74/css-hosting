@@ -237,7 +237,7 @@ ul#subnav-1 li.search.desktop a {
 
 /* Set initial logo size & position. */
 img#desktop-logo {
-	max-width: 85%;
+	max-width: 100%;
 }
 
  div#navbar div.logo {
@@ -441,7 +441,7 @@ img#desktop-logo {
 		max-width: 800px;
 	}
 	img#desktop-logo {
-		max-width: 85%;
+		max-width: 100%;
 	}
 	 div#navbar div.logo {
 		width: 214px;
@@ -464,7 +464,7 @@ img#desktop-logo {
 		max-width: 700px;
 	}
 	img#desktop-logo {
-		max-width: 75%;
+		max-width: 100%;
 	}
 	 div#navbar div.logo {
 		margin-right: 10px;
@@ -492,7 +492,7 @@ img#desktop-logo {
 		max-width: 640px;
 	}
 	img#desktop-logo {
-		max-width: 70%;
+		max-width: 100%;
 	}
 	 div#navbar div.logo {
 		margin-right: 0;
@@ -535,7 +535,7 @@ img#desktop-logo {
 		max-width: 560px;
 	}
 	img#desktop-logo {
-		max-width: 92%;
+		max-width: 100%;
 	}
 	 div#navbar div.logo {
 		margin-right: 8px;
