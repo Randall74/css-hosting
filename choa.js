@@ -333,7 +333,7 @@ $(document).ready(function() {
 	// Back To Top Button - Global
 
 	// Append "Back To Top" link to all HTML pages
-	$('body').append($('<div id="top-link-block" class="hidden"><a href="#top""><img src="Content/Childrens/assets/images/icons/back_top_icon.png"></a></div>'));
+	$('body').append($('<div id="top-link-block" class="hidden"><a href="#top"https://giving.choa.org/image/choa/new-choa/back_top_icon.png"><img src=""></a></div>'));
 	
 	// Only enable if the document has a long scroll bar
 	// Note the window height + offset
